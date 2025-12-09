@@ -1,15 +1,43 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
+@import "tailwindcss";
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+	@apply bg-white dark:bg-gray-950;
+	font-family: "Roboto", sans-serif;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+	@media (prefers-color-scheme: dark) {
+		color-scheme: dark;
+	}
 }
+
+.navbar {
+	@apply text-white bg-blue-900 py-4;
+}
+
+.navbar-container {
+	@apply flex justify-around;
+}
+
+.navbar-item {
+	@apply text-lg font-bold uppercase;
+}
+
+.navbar-link {
+	@apply text-white hover:underline;
+}
+
+.header {
+	@apply bg-blue-100 py-10 px-24;
+}
+
+.header-container {
+	@apply flex flex-wrap items-center;
+}
+
+.header-title {
+	font-family: "Miniver", cursive;
+}
+
