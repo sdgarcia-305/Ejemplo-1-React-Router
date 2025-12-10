@@ -3,6 +3,7 @@ import headerImage from '../../images/header-image.png'
 // Componente de encabezado (header)
 const Header = () => {
     return (
+        <>
         <header className="header">
             <div className="header-container">
                 <div className="w-2/5">
@@ -24,6 +25,8 @@ const Header = () => {
                 </div>
             </div>
         </header>
+        
+        </>
     );
 };
 

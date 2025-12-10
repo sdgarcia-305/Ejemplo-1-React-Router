@@ -1,7 +1,8 @@
 import Navbar from '../design/Navbar';
-import Header from '../components/main/header';
+import Header from '../components/main/Header';
 import ServicesSection from '../content/home/ServicesSection';
 import ContactSection from '../content/home/ContactSection';
+import Footer from '~/design/Footer';
 
 export function Welcome() {
 	return (
@@ -24,7 +25,7 @@ export function Welcome() {
 
 			{/* Footer (Pie de página) */}
 			<footer>
-				Pie de página
+				<Footer></Footer>
 			</footer>
 		</>
 	);
