@@ -1,4 +1,13 @@
 const Card = ({ children, title, link }: any) => {
+    //Funcion que advierte al usuario que será redirigido
+    const handdleClick = () => {
+        let message = `Seras redirigido a la pagina de ${ title }`;
+
+        alert(message);
+
+        alert(`Redirigiendo a ${link}`);
+    };
+    
     return (
         <div className="card">
             <div className="card-header">
@@ -10,9 +19,9 @@ const Card = ({ children, title, link }: any) => {
                 { children }
             </div>
             <div className="card-footer">
-                <a href={ link } className="text-base bg-blue-800 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-blue-700">
+                <button className="text-base bg-blue-800 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-blue-700" onClick={handdleClick}>
                     Ver más
-                </a>
+                </button>
             </div>
         </div>
     );

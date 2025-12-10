@@ -24,9 +24,8 @@ export function Welcome() {
 			</main>
 
 			{/* Footer (Pie de página) */}
-			<footer>
+
 				<Footer></Footer>
-			</footer>
 		</>
 	);
 }
