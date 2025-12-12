@@ -1,14 +1,31 @@
+import AOS from 'aos';
+import { useEffect } from 'react'; // Hook que se activa al cargar la página
+
 import Navbar from '../design/Navbar';
+import Sidebar from '../design/Sidebar';
 import Header from '../components/main/Header';
 import ServicesSection from '../content/home/ServicesSection';
 import ContactSection from '../content/home/ContactSection';
+
+import 'aos/dist/aos.css';
 import Footer from '~/design/Footer';
 
 export function Welcome() {
+	const initPage = () => {
+		AOS.init({
+			duration: 1000,
+		});
+	};
+
+	useEffect(function() {
+		initPage();
+	}, []);
+
 	return (
 		<>
 			{/** Navbar (Menú de navegación) */}
-			<Navbar></Navbar>
+			{/* <Navbar></Navbar> */}
+			<Sidebar></Sidebar>
 
 			{/* Header (Encabezado) */}
 			<Header></Header>
@@ -24,10 +41,7 @@ export function Welcome() {
 			</main>
 
 			{/* Footer (Pie de página) */}
-
 				<Footer></Footer>
 		</>
 	);
-}
-
-
+};
